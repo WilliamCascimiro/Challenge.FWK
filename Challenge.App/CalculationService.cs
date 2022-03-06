@@ -11,6 +11,13 @@ public class CalculationService
                 break;
             Console.WriteLine("Por favor, informe um número inteiro positivo");
         }
+
+        var divisors = GetDivisors(informedNumber);
+        var primes = GetPrimes(divisors);
+
+        Console.WriteLine(@"Número de Entrada: " + String.Join(", ", informedNumber));
+        Console.WriteLine(@"Número Divisores: " + String.Join(", ", divisors));
+        Console.WriteLine(@"Divisores Primos: " + String.Join(", ", primes));
     }
 
     #region Methods
