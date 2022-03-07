@@ -31,8 +31,7 @@ public class CalculationService
 
     public IEnumerable<int> GetPrimes(IEnumerable<int> numbers)
     {
-        var teste = numbers.Where(x => IsPrime(x)).ToList();
-        return teste;
+        return numbers.Where(x => IsPrime(x)).ToList();
     }
 
     public bool IsPrime(int number)
