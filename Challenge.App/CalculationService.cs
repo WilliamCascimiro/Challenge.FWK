@@ -25,13 +25,12 @@ public class CalculationService
     public IEnumerable<int> GetDivisors(int number)
     {
         return Enumerable.Range(1, number)
-                .Where(x => number % x == 0)
-                .ToList();
+                .Where(x => number % x == 0);
     }
 
     public IEnumerable<int> GetPrimes(IEnumerable<int> numbers)
     {
-        return numbers.Where(x => IsPrime(x)).ToList();
+        return numbers.Where(x => IsPrime(x));
     }
 
     public bool IsPrime(int number)
