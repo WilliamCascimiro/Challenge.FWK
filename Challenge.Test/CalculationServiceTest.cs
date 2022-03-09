@@ -1,7 +1,7 @@
-using Service;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using Challenge.Service;
 
 namespace Challenge.Test
 {
