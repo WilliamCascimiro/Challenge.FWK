@@ -18,6 +18,9 @@ namespace Challenge.API.Controllers
         [HttpGet(Name = "Calculate/{number}")]
         public IActionResult Calculate(int number)
         {
+            if (number <= 0)
+                return BadRequest("Por favor, informe um número inteiro positivo.");
+
             var calculation = _calculationService.Calculate(number);
             return Ok(new CalculationDTO(number, calculation.Item1, calculation.Item2));
         }
